@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" class="h-full ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+ 
+  <title>HG Software</title>
+</head>
+<body class="bg-white h-full flex flex-col dark:bg-gray-900 dark:text-white"></body>
+
+
+<!--         ÜSTTEKİ NAVBAR KISMI           -->
+    <div class="h-24 border-b border-gray-100 w-full flex justify-between items-center px-20 flex-shrink-0 dark:border-gray-700"> <!--justify-between:Tam ortalamayı sağlıyor. items-center:Yükseklikle tam ortalar.-->
+       
+        <button onclick="sidebar()" class="text-gray-800 lg:hidden dark:bg-white"><!-- Ekranı küçülttüğümüzde çıkan menü kısmı -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" class="fill-current"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        
+        
+        <img src="img/hg.png"  class="w-20 h-20 rounded-full " alt="HG Software">
+        <form action="" class="w-1/3 hidden lg:block">
+            <input type="text" placeholder="Ara" class="w-full bg-gray-100 h-10 px-5 placeholder-gray-500 rounded dark:bg-gray-700 dark:placeholder-gray-300">
+        </form>
+        <a href="javascript:;" onclick="modal('login-modal')" class="bg-gray-800  text-white h-10 inline-flex items-center px-5 rounded lg:text-right">
+            Giriş yap
+        </a>
+    </div>
+
+
+<!--        SOLDAKİ NAVBAR KISMI               -->
+    <main class="h-full flex ">
+
+        <aside class="sidebar"> <!--overflow-auto: EKranın küçülmesi sonucunda scroll bar yapar.-->
+            <nav class="mb-3 pb-3">
+                <a href="#" class="nav-link active">Anasayfa</a>
+                <a href="#" class="nav-link">Akış</a>
+                <a href="#" class="nav-link">Keşfet</a>
+                <a href="#" class="nav-link">Makaleler</a>
+                <a href="#" class="nav-link">Soru & Cevap</a>
+            </nav>
+
+            <nav class="mt-3 pt-3"> 
+                <a href="#" class="nav-link">HTML</a>
+                <a href="#" class="nav-link">CSS</a>
+                <a href="#" class="nav-link">Javascript</a>
+                <a href="#" class="nav-link">Ruby</a>
+                <a href="#" class="nav-link">Java</a>
+            </nav>
+
+            <div class="mt-80 pt-3 p-3">
+                <button onclick="darkMode()"  class="bg-gray-900 dark:bg-white hover:bg-gray-400 transition-colors text-white dark:text-gray-800 text-sm h-10 rounded flex items-center px-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" class="fill-current text-white dark:text-gray-800 mr-4"><rect fill="none" height="24" width="24"/><path d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg>
+                    <span class="hidden dark:inline">Açık Mod</span>
+                    <span class="inline dark:hidden">Koyu Mod</span>                   
+                </button>               
+            </div>
+            
+
+        </aside>
+        <!--   Başlık kısmı   -->
+        <section class="flex-auto py-6 px-10 overflow-auto">
+            <div class="mx-auto max-w-screen-xl">
+                <h2 class="text-5xl text-gray-800 font-extrabold mb-3 leading-relaxed dark:text-white">Kendi gelişimine değer kat!</h2>
+                <p>Herkese merhabalar. İyi bir başlangıç için, doğru bir başlangıç gerekir. HG Software ile birçok dil ve teknolojiyle karşılaşma olanağı sunuyoruz.</p>
+
+                <!--    Programlama dillerinin yazılı olduğu kısımlar     -->
+                <div class="flex lg:grid overflow-x-auto mt-5 grid-cols-10 gap-5 lg:gap-7">
+
+                    <div class="slider">
+                        <a href="#" class="slider-item hover:!border-red-600 ">
+                            <span class="slider-item-1 border-red-400">                             
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--vscode-icons" width="70" height="70" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30L5.902 27.201z"></path><path fill="#f1662a" d="M16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path><path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16v-3.091z"></path><path fill="#ebebeb" d="M16 21.434l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004v-3.216z"></path><path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83H15.989z"></path><path fill="#fff" d="M15.989 7.151V10.242h7.466l.062-.694l.141-1.567l.074-.83h-7.743z"></path></svg>                               
+                            </span>
+                            <span class="slider-item-2 bg-red-500">
+                                    HTML
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="slider">
+                        <a href="#" class=" slider-item hover:!border-blue-700 ">
+                            <span class="slider-item-1 border-blue-500 ">                                
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--vscode-icons" width="70" height="70" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30L5.902 27.201z"></path><path fill="#33a9dc" d="M16 27.858l8.17-2.265l1.922-21.532H16v23.797z"></path><path fill="#fff" d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16v-3.091z"></path><path fill="#ebebeb" d="M16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004v-3.216z"></path><path fill="#fff" d="M19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007h-3.101z"></path><path fill="#ebebeb" d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829h7.743z"></path><path fill="#ebebeb" d="M16 13.191v3.091H12.601l-.062-.695l-.14-1.567l-.074-.829H16z"></path></svg>                               
+                            </span>
+                            <span class="slider-item-2 bg-blue-500">
+                                CSS
+                          </span>
+                        </a>
+                    </div>
+
+                    <div class="slider">
+                        <a href="#" class=" slider-item hover:!border-yellow-600 ">
+                            <span class="slider-item-1 border-yellow-500 ">        
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="55" height="55" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"></path><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371c7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259c-19.245 0-30.416-9.967-36.087-21.996" fill="#000"></path><path d="M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607c9.969 0 16.325-4.984 16.325-11.858c0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257c0-18.044 13.747-31.792 35.228-31.792c15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31c-7.046 0-11.514 4.468-11.514 10.31c0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804c0 21.654-17.012 33.51-39.867 33.51c-22.339 0-36.774-10.654-43.819-24.574" fill="#000"></path></svg>                                                            
+                            </span>
+                            <span class="slider-item-2 bg-yellow-500">
+                                JAVASCRİPT
+                          </span>
+                        </a>
+                    </div>
+
+                    <div class="slider">
+                        <a href="#" class=" slider-item  hover:!border-red-900 ">
+                            <span class="slider-item-1 border-red-800 ">                               
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="60" height="60" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 255"><defs><linearGradient x1="84.75%" y1="111.399%" x2="58.254%" y2="64.584%" id="IconifyId17eb4c8c0d683dcf8172"><stop stop-color="#FB7655" offset="0%"></stop><stop stop-color="#FB7655" offset="0%"></stop><stop stop-color="#E42B1E" offset="41%"></stop><stop stop-color="#900" offset="99%"></stop><stop stop-color="#900" offset="100%"></stop></linearGradient><linearGradient x1="116.651%" y1="60.89%" x2="1.746%" y2="19.288%" id="IconifyId17eb4c8c0d683dcf8173"><stop stop-color="#871101" offset="0%"></stop><stop stop-color="#871101" offset="0%"></stop><stop stop-color="#911209" offset="99%"></stop><stop stop-color="#911209" offset="100%"></stop></linearGradient><linearGradient x1="75.774%" y1="219.327%" x2="38.978%" y2="7.829%" id="IconifyId17eb4c8c0d683dcf8174"><stop stop-color="#871101" offset="0%"></stop><stop stop-color="#871101" offset="0%"></stop><stop stop-color="#911209" offset="99%"></stop><stop stop-color="#911209" offset="100%"></stop></linearGradient><linearGradient x1="50.012%" y1="7.234%" x2="66.483%" y2="79.135%" id="IconifyId17eb4c8c0d683dcf8175"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#E57252" offset="23%"></stop><stop stop-color="#DE3B20" offset="46%"></stop><stop stop-color="#A60003" offset="99%"></stop><stop stop-color="#A60003" offset="100%"></stop></linearGradient><linearGradient x1="46.174%" y1="16.348%" x2="49.932%" y2="83.047%" id="IconifyId17eb4c8c0d683dcf8176"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#E4714E" offset="23%"></stop><stop stop-color="#BE1A0D" offset="56%"></stop><stop stop-color="#A80D00" offset="99%"></stop><stop stop-color="#A80D00" offset="100%"></stop></linearGradient><linearGradient x1="36.965%" y1="15.594%" x2="49.528%" y2="92.478%" id="IconifyId17eb4c8c0d683dcf81<stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#E46342" offset="18%"></stop><stop stop-color="#C82410" offset="40%"></stop><stop stop-color="#A80D00" offset="99%"></stop><stop stop-color="#A80D00" offset="100%"></stop></linearGradient><linearGradient x1="13.609%" y1="58.346%" x2="85.764%" y2="-46.717%" id="IconifyId17eb4c8c0d683dcf8178"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#C81F11" offset="54%"></stop><stop stop-color="#BF0905" offset="99%"></stop><stop stop-color="#BF0905" offset="100%"></stop></linearGradient><linearGradient x1="27.624%" y1="21.135%" x2="50.745%" y2="79.056%" id="IconifyId17eb4c8c0d683dcf8179"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#DE4024" offset="31%"></stop><stop stop-color="#BF190B" offset="99%"></stop><stop stop-color="#BF190B" offset="100%"></stop></linearGradient><linearGradient x1="-20.667%" y1="122.282%" x2="104.242%" y2="-6.342%" id="IconifyId17eb4c8c0d683dcf8180"><stop stop-color="#BD0012" offset="0%"></stop><stop stop-color="#BD0012" offset="0%"></stop><stop stop-color="#FFF" offset="7%"></stop><stop stop-color="#FFF" offset="17%"></stop><stop stop-color="#C82F1C" offset="27%"></stop><stop stop-color="#820C01" offset="33%"></stop><stop stop-color="#A31601" offset="46%"></stop><stop stop-color="#B31301" offset="72%"></stop><stop stop-color="#E82609" offset="99%"></stop><stop stop-color="#E82609" offset="100%"></stop></linearGradient><linearGradient x1="58.792%" y1="65.205%" x2="11.964%" y2="50.128%" id="IconifyId17eb4c8c0d683dcf8181"><stop stop-color="#8C0C01" offset="0%"></stop><stop stop-color="#8C0C01" offset="0%"></stop><stop stop-color="#990C00" offset="54%"></stop><stop stop-color="#A80D0E" offset="99%"></stop><stop stop-color="#A80D0E" offset="100%"></stop></linearGradient><linearGradient x1="79.319%" y1="62.754%" x2="23.088%" y2="17.888%" id="IconifyId17eb4c8c0d683dcf8182"><stop stop-color="#7E110B" offset="0%"></stop><stop stop-color="#7E110B" offset="0%"></stop><stop stop-color="#9E0C00" offset="99%"></stop><stop stop-color="#9E0C00" offset="100%"></stop></linearGradient><linearGradient x1="92.88%" y1="74.122%" x2="59.841%" y2="39.704%" id="IconifyId17eb4c8c0d683dcf8183"><stop stop-color="#79130D" offset="0%"></stop><stop stop-color="#79130D" offset="0%"></stop><stop stop-color="#9E120B" offset="99%"></stop><stop stop-color="#9E120B" offset="100%"></stop></linearGradient><linearGradient x1="56.57%" y1="101.717%" x2="3.105%" y2="11.993%" id="IconifyId17eb4c8c0d683dcf8184"><stop stop-color="#8B2114" offset="0%"></stop><stop stop-color="#8B2114" offset="0%"></stop><stop stop-color="#9E100A" offset="43%"></stop><stop stop-color="#B3100C" offset="99%"></stop><stop stop-color="#B3100C" offset="100%"></stop></linearGradient><linearGradient x1="30.87%" y1="35.599%" x2="92.471%" y2="100.694%" id="IconifyId17eb4c8c0d683dcf8185"><stop stop-color="#B31000" offset="0%"></stop><stop stop-color="#B31000" offset="0%"></stop><stop stop-color="#910F08" offset="44%"></stop><stop stop-color="#791C12" offset="99%"></stop><stop stop-color="#791C12" offset="100%"></stop></linearGradient><radialGradient cx="32.001%" cy="40.21%" fx="32.001%" fy="40.21%" r="69.573%" id="IconifyId17eb4c8c0d683dcf8186"><stop stop-color="#A80D00" offset="0%"></stop><stop stop-color="#A80D00" offset="0%"></stop><stop stop-color="#7E0E08" offset="99%"></stop><stop stop-color="#7E0E08" offset="100%"></stop></radialGradient><radialGradient cx="13.549%" cy="40.86%" fx="13.549%" fy="40.86%" r="88.386%" id="IconifyId17eb4c8c0d683dcf8187"><stop stop-color="#A30C00" offset="0%"></stop><stop stop-color="#A30C00" offset="0%"></stop><stop stop-color="#800E08" offset="99%"></stop><stop stop-color="#800E08" offset="100%"></stop></radialGradient></defs><path d="M197.467 167.764l-145.52 86.41l188.422-12.787L254.88 51.393l-57.414 116.37z" fill="url(#IconifyId17eb4c8c0d683dcf8172)"></path><path d="M240.677 241.257L224.482 129.48l-44.113 58.25l60.308 53.528z" fill="url(#IconifyId17eb4c8c0d683dcf8173)"></path><path d="M240.896 241.257l-118.646-9.313l-69.674 21.986l188.32-12.673z" fill="url(#IconifyId17eb4c8c0d683dcf8174)"></path><path d="M52.744 253.955l29.64-97.1L17.16 170.8l35.583 83.154z" fill="url(#IconifyId17eb4c8c0d683dcf8175)"></path><path d="M180.358 188.05L153.085 81.226l-78.047 73.16l105.32 33.666z" fill="url(#IconifyId17eb4c8c0d683dcf8176)"></path><path d="M248.693 82.73l-73.777-60.256l-20.544 66.418l94.321-6.162z" fill="url(#IconifyId17eb4c8c0d683dcf8177)"></path><path d="M214.191.99L170.8 24.97L143.424.669l70.767.322z" fill="url(#IconifyId17eb4c8c0d683dcf8178)"></path><path d="M0 203.372l18.177-33.151l-14.704-39.494L0 203.372z" fill="url(#IconifyId17eb4c8c0d683dcf8179)"></path><path d="M2.496 129.48l14.794 41.963l64.283-14.422l73.39-68.207l20.712-65.787L143.063 0L87.618 20.75c-17.469 16.248-51.366 48.396-52.588 49c-1.21.618-22.384 40.639-32.534 59.73z" fill="#FFF"></path><path d="M54.442 54.094c37.86-37.538 86.667-59.716 105.397-40.818c18.72 18.898-1.132 64.823-38.992 102.349c-37.86 37.525-86.062 60.925-104.78 42.027c-18.73-18.885.515-66.032 38.375-103.558z" fill="url(#IconifyId17eb4c8c0d683dcf8180)"></path><path d="M52.744 253.916l29.408-97.409l97.665 31.376c-35.312 33.113-74.587 61.106-127.073 66.033z" fill="url(#IconifyId17eb4c8c0d683dcf8181)"></path><path d="M155.092 88.622l25.073 99.313c29.498-31.016 55.972-64.36 68.938-105.603l-94.01 6.29z" fill="url(#IconifyId17eb4c8c0d683dcf8182)"></path><path d="M248.847 82.833c10.035-30.282 12.35-73.725-34.966-81.791l-38.825 21.445l73.791 60.346z" fill="url(#IconifyId17eb4c8c0d683dcf8183)"></path><path d="M0 202.935c1.39 49.979 37.448 50.724 52.808 51.162l-35.48-82.86L0 202.935z" fill="#9E1209"></path><path d="M155.232 88.777c22.667 13.932 68.35 41.912 69.276 42.426c1.44.81 19.695-30.784 23.838-48.64l-93.114 6.214z" fill="url(#IconifyId17eb4c8c0d683dcf8186)"></path><path d="M82.113 156.507l39.313 75.848c23.246-12.607 41.45-27.967 58.121-44.42l-97.434-31.428z" fill="url(#IconifyId17eb4c8c0d683dcf8187)"></path><path d="M17.174 171.34l-5.57 66.328c10.51 14.357 24.97 15.605 40.136 14.486c-10.973-27.311-32.894-81.92-34.566-80.814z" fill="url(#IconifyId17eb4c8c0d683dcf8184)"></path><path d="M174.826 22.654l78.1 10.96c-4.169-17.662-16.969-29.06-38.787-32.623l-39.313 21.663z" fill="url(#IconifyId17eb4c8c0d683dcf8185)"></path></svg>            
+                            </span>
+                            <span class="slider-item-2 bg-red-800">
+                               RUBY
+                          </span>
+                        </a>
+                    </div>
+
+                    <div class="slider">
+                        <a href="#" class=" slider-item hover:!border-orange-700 ">
+                            <span class="slider-item-1 border-orange-500 ">                             
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="60" height="60" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 346"><path d="M82.554 267.473s-13.198 7.675 9.393 10.272c27.369 3.122 41.356 2.675 71.517-3.034c0 0 7.93 4.972 19.003 9.279c-67.611 28.977-153.019-1.679-99.913-16.517" fill="#5382A1"></path><path d="M74.292 229.659s-14.803 10.958 7.805 13.296c29.236 3.016 52.324 3.263 92.276-4.43c0 0 5.526 5.602 14.215 8.666c-81.747 23.904-172.798 1.885-114.296-17.532" fill="#5382A1"></path><path d="M143.942 165.515c16.66 19.18-4.377 36.44-4.377 36.44s42.301-21.837 22.874-49.183c-18.144-25.5-32.059-38.172 43.268-81.858c0 0-118.238 29.53-61.765 94.6" fill="#E76F00"></path><path d="M233.364 295.442s9.767 8.047-10.757 14.273c-39.026 11.823-162.432 15.393-196.714.471c-12.323-5.36 10.787-12.8 18.056-14.362c7.581-1.644 11.914-1.337 11.914-1.337c-13.705-9.655-88.583 18.957-38.034 27.15c137.853 22.356 251.292-10.066 215.535-26.195" fill="#5382A1"></path><path d="M88.9 190.48s-62.771 14.91-22.228 20.323c17.118 2.292 51.243 1.774 83.03-.89c25.978-2.19 52.063-6.85 52.063-6.85s-9.16 3.923-15.787 8.448c-63.744 16.765-186.886 8.966-151.435-8.183c29.981-14.492 54.358-12.848 54.358-12.848" fill="#5382A1"></path><path d="M201.506 253.422c64.8-33.672 34.839-66.03 13.927-61.67c-5.126 1.066-7.411 1.99-7.411 1.99s1.903-2.98 5.537-4.27c41.37-14.545 73.187 42.897-13.355 65.647c0 .001 1.003-.895 1.302-1.697" fill="#5382A1"></path><path d="M162.439.371s35.887 35.9-34.037 91.101c-56.071 44.282-12.786 69.53-.023 98.377c-32.73-29.53-56.75-55.526-40.635-79.72C111.395 74.612 176.918 57.393 162.439.37" fill="#E76F00"></path><path d="M95.268 344.665c62.199 3.982 157.712-2.209 159.974-31.64c0 0-4.348 11.158-51.404 20.018c-53.088 9.99-118.564 8.824-157.399 2.421c.001 0 7.95 6.58 48.83 9.201" fill="#5382A1"></path></svg>
+                            </span>
+                            <span class="slider-item-2 bg-orange-500">
+                                JAVA
+                          </span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!--         TWİTTER KISMI     -->
+                <div class="bg-blue-400 p-7 mt-20 rounded-xl text-white flex flex-col lg:flex-row items-center">
+                    <div class="flex-shrink-0 w-20 pl-0 lg:pl-2 mb-4 lg:mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--radix-icons" width="50" height="50" preserveAspectRatio="xMidYMid meet" viewBox="0 0 15 15"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.233 4.696c0-1.727 1.4-3.127 3.127-3.127c1.014 0 1.823.479 2.365 1.175a5.246 5.246 0 0 0 1.626-.629a2.634 2.634 0 0 1-1.148 1.45l.002.003a5.26 5.26 0 0 0 1.5-.413l-.001.002c-.337.505-.76.95-1.248 1.313c.026.177.04.354.04.53c0 3.687-2.809 7.975-7.975 7.975a7.93 7.93 0 0 1-4.296-1.26a.5.5 0 0 1-.108-.748a.45.45 0 0 1 .438-.215c.916.108 1.83-.004 2.637-.356a3.086 3.086 0 0 1-1.69-1.876a.45.45 0 0 1 .103-.448a3.07 3.07 0 0 1-1.045-2.31v-.034a.45.45 0 0 1 .365-.442a3.068 3.068 0 0 1-.344-1.416c0-.468.003-1.058.332-1.59a.45.45 0 0 1 .323-.208a.5.5 0 0 1 .538.161a6.964 6.964 0 0 0 4.46 2.507v-.044zm-1.712 7.279a6.936 6.936 0 0 1-2.249-.373a5.318 5.318 0 0 0 2.39-1.042a.45.45 0 0 0-.27-.804a2.174 2.174 0 0 1-1.714-.888c.19-.015.376-.048.556-.096a.45.45 0 0 0-.028-.876a2.18 2.18 0 0 1-1.644-1.474c.2.048.409.077.623.084a.45.45 0 0 0 .265-.824A2.177 2.177 0 0 1 2.48 3.87c0-.168.003-.317.013-.453a7.95 7.95 0 0 0 5.282 2.376a.5.5 0 0 0 .513-.61a2.127 2.127 0 0 1 2.071-2.614c1.234 0 2.136 1.143 2.136 2.432c0 3.256-2.476 6.974-6.975 6.974z" fill="currentColor"></path></g></svg>
+                    </div>
+
+                    <div>
+                         <h6 class="text-xl mb-1">Twitter'da <strong class="font-semibold">@hg_software</strong> hesabını takip etmeyi unutma!</h6>
+                        <p>Hazırladığımız videolardan anında haberdar olmak için twitter hesabımızı takip edebilirsiniz!</p>
+                        <a href="#" class="bg-white text-black h-10 p-5 inline-flex items-center rounded mt-4">Takip et</a>
+                    </div>                   
+                </div>
+
+            </div>           
+        </section>        
+    </main>
+
+    <!--     MODEL(POP-UP) YAPIMI   -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h3 class="text-2xl mb-4">Giriş Yap</h3>
+            <button onclick="modal('login-modal')" class="bg-slate-700 px-6 inline-flex items-center rounded h-10 text-white">Kapat</button>
+        </div>
+    </div>
+
+    
+    <script>
+        /* Koyu mod için javascript kodudur. Sayfa koyu moddayken sayfayı yenilediğimizde koyu moddan çıkmamasını sağlamak için kodlar da var.*/
+        if(localStorage.getItem('dark')){
+            document.documentElement.classList.add('dark');
+        }
+            
+        function darkMode(){
+            document.documentElement.classList.toggle('dark'); /*document.documentElement ile html etiketini seçmiş oluyorum*/
+            if(document.documentElement.classList.contains('dark')){
+                localStorage.setItem('dark',true);
+            }
+            else{
+                localStorage.removeItem('dark');
+            }
+        }
+
+        /* Modal kısmı  */
+        function modal(id){
+            document.getElementById(id).classList.toggle('active');
+        }
+
+        /* Ekran küçüldüğünde çıkan menu kısmı */
+        function sidebar(){
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

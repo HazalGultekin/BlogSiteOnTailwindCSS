@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* kullandığım fontu dahil ettim */
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@300;400;600&display=swap');
+    html {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+/* soldaki navbar kısmındaki classlarda hep aynı şeyleri kullandığımız için böyle yapmak daha temiz kod yazılımını sağlar. */
+@layer components {
+    .nav-link {
+        @apply flex items-center h-10 rounded px-3 text-base text-gray-800 font-bold hover:bg-gray-300 transition-colors dark:text-white  dark:hover:bg-gray-500 dark:hover:text-white;
+    }
+    .nav-link.active {
+        @apply bg-gray-800 text-white;
+    }
+
+    .modal {
+        @apply fixed inset-0 bg-slate-700 bg-opacity-60 flex items-center justify-center opacity-0 invisible transition-opacity ;
+    }
+    .modal.active {
+        @apply visible opacity-100;
+    }
+    .modal-content {
+        @apply bg-white rounded p-10 max-w-full min-w-[600px] dark:bg-gray-800;
+    }
+
+    .slider {
+        @apply col-span-5 lg:col-span-2;
+    }
+    .slider-item {
+        @apply border flex flex-col px-4 py-7 items-center rounded transition-colors dark:border-gray-700;
+    }
+    .slider-item-1 {
+        @apply w-24 h-24 border  rounded-full grid place-items-center relative;
+    }
+    .slider-item-2 {
+        @apply inline-flex items-center rounded h-7 px-4 mt-1 text-white;
+    }
+
+    .sidebar {
+        @apply w-full lg:w-64 bg-white dark:bg-gray-800 scale-90 lg:scale-100 absolute lg:relative inset-0 top-24 lg:top-0 opacity-0 lg:opacity-100 invisible lg:visible  flex-shrink-0 border-r p-3 flex flex-col border-gray-100 divide-gray-100 overflow-auto dark:border-gray-800 dark:divide-gray-800 transition-all;
+    }
+    .sidebar.active {
+        @apply  opacity-100 visible  z-10 scale-100;
+    }
+}
